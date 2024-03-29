@@ -18,5 +18,3 @@ applications:
   - name: other
   - name: rabbitmq
   - name: ui
-  
-clusterName: eks-jam-cluster-blue
