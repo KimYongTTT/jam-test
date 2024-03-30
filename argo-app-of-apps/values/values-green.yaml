@@ -1,14 +1,10 @@
 spec:
   destination:
-    # HIGHLIGHT
     server: https://kubernetes.default.svc
   source:
-    # HIGHLIGHT
-    repoURL: https://github.com/KimYongTTT/jam-test.git
-    # HIGHLIGHT
+    repoURL: ${GITOPS_REPO_URL_ARGOCD}
     targetRevision: main
 
-# HIGHLIGHT
 applications:
   - name: assets
   - name: carts
@@ -18,3 +14,5 @@ applications:
   - name: other
   - name: rabbitmq
   - name: ui
+
+clusterName: eks-jam-cluster-green
