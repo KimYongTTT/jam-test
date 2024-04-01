@@ -2,7 +2,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/KimYongTTT/jam-test.git
+    repoURL: ${GITOPS_REPO_URL_ARGOCD}
     targetRevision: main
 
 applications:
@@ -14,5 +14,3 @@ applications:
   - name: other
   - name: rabbitmq
   - name: ui
-
-clusterName: eks-jam-cluster-blue
