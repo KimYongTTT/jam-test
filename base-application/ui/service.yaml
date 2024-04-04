@@ -10,12 +10,12 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/created-by: eks-workshop
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
     - port: 80
-      targetPort: http
+      targetPort: 80
       protocol: TCP
-      name: http
+      nodeport: 30001
   selector:
     app.kubernetes.io/name: ui
     app.kubernetes.io/instance: ui
