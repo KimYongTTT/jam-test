@@ -14,7 +14,7 @@ spec:
   ports:
     - port: 80
       targetPort: http
-      protocol: TCP
+      protocol: HTTP
       name: http
   selector:
     app.kubernetes.io/name: ui
